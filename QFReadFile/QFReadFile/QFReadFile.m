@@ -26,4 +26,32 @@
     fclose(fp1);//关闭文件a.txt，有打开就要有关闭
 }
 
++ (void)folderPath:(NSString *)path block:(void(^)(NSString *path))callback {
+    [self folderPath:path filter:nil block:callback];
+}
+
++ (void)folderPath:(NSString *)path filter:(NSString *)filter block:(void(^)(NSString *path))callback {
+
+    NSArray *files = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:path error:nil];
+    files = [self getClassPathInArr:files filter:filter];
+    
+    if (callback) {
+        for(NSString *path in files){
+            callback(path);
+        }
+    }
+}
+
++ (NSArray *)getClassPathInArr:(NSArray *)arr filter:(NSString *)filter {
+    NSMutableArray *pathArray = [NSMutableArray array];
+    for(NSString *path in arr){
+        NSString *lastComponent = [path lastPathComponent];
+        if(filter && ![lastComponent containsString:filter]) {
+            continue;
+        }
+        [pathArray addObject:path];
+    }
+    return pathArray;
+}
+
 @end

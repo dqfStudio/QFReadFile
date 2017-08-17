@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1512E4EA1F45E5C4009401EE /* TestNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1512E4E91F45E5C4009401EE /* TestNet.m */; };
 		15CB1B7A1F441A0100AEC086 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CB1B791F441A0100AEC086 /* main.m */; };
 		15CB1B911F441A6800AEC086 /* QFReadFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CB1B901F441A6800AEC086 /* QFReadFile.m */; };
 		15CB1BCA1F442A9D00AEC086 /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CB1BC71F442A9D00AEC086 /* NSArray+Extension.m */; };
@@ -14,6 +15,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1512E4E81F45E5C4009401EE /* TestNet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNet.h; sourceTree = "<group>"; };
+		1512E4E91F45E5C4009401EE /* TestNet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNet.m; sourceTree = "<group>"; };
 		15CB1B751F441A0100AEC086 /* QFReadFile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QFReadFile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15CB1B791F441A0100AEC086 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		15CB1B891F441A0100AEC086 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +61,8 @@
 				15CB1BC51F442A9D00AEC086 /* Extension */,
 				15CB1B8F1F441A6800AEC086 /* QFReadFile.h */,
 				15CB1B901F441A6800AEC086 /* QFReadFile.m */,
+				1512E4E81F45E5C4009401EE /* TestNet.h */,
+				1512E4E91F45E5C4009401EE /* TestNet.m */,
 				15CB1B891F441A0100AEC086 /* Info.plist */,
 				15CB1B781F441A0100AEC086 /* Supporting Files */,
 			);
@@ -156,6 +161,7 @@
 				15CB1BCB1F442A9D00AEC086 /* NSDictionary+Extension.m in Sources */,
 				15CB1B911F441A6800AEC086 /* QFReadFile.m in Sources */,
 				15CB1B7A1F441A0100AEC086 /* main.m in Sources */,
+				1512E4EA1F45E5C4009401EE /* TestNet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

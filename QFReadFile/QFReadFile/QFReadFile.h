@@ -10,6 +10,10 @@
 
 @interface QFReadFile : NSObject
 
++ (void)folderPath:(NSString *)path block:(void(^)(NSString *path))callback;
+
++ (void)folderPath:(NSString *)path filter:(NSString *)filter block:(void(^)(NSString *path))callback;
+
 + (void)file:(NSString *)path block:(void(^)(NSString *lineStr))callback;
 
 @end
