@@ -12,7 +12,7 @@
 
 + (void)file:(NSString *)path append:(NSString *)content {
     
-    [self createFileAtPath:path contents:[content dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
+    [self createFileAtPath:path contents:nil attributes:nil];
     
     NSFileHandle *outFile = [NSFileHandle fileHandleForWritingAtPath:path];
     
