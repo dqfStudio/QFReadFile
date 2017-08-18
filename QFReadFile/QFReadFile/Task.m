@@ -10,8 +10,7 @@
 #import "QFReadFile.h"
 #import "QFWriteFile.h"
 #import "TestNet.h"
-
-#define KPATH @"/Users/issuser/Desktop/WorkPlace/MiguMusic-iOS"
+#import "QFFileHelper.h"
 
 @implementation Task
 
@@ -25,7 +24,9 @@
 }
 
 - (void)exe {
+    
 //    [self example1];
+    
 }
 
 - (void)example1 {
@@ -33,12 +34,12 @@
 //    NSMutableArray *arr1 = [NSMutableArray array];
 //    NSMutableArray *arr2 = [NSMutableArray array];
 //
-//    [QFReadFile folderPath:KPATH filter:@"Net.h" block:^(NSString *path) {
+//    [QFFileHelper folderPath:KPATH filter:@"Net.h" block:^(NSString *path) {
 //
 //        NSString *fileName = [[path lastPathComponent] stringByDeletingPathExtension];
 //        [arr1 addObject:fileName];
 //
-//        [QFReadFile file:path block:^(NSString *lineStr) {
+//        [QFFileHelper file:path block:^(NSString *lineStr) {
 //
 //            [arr2 addObject:lineStr];
 //        }];
@@ -53,7 +54,7 @@
     //例子二
 //    NSMutableArray *arr = [NSMutableArray array];
 //
-//    [QFReadFile folderPath:KPATH filter:@"Net.h" block:^(NSString *path) {
+//    [QFFileHelper folderPath:KPATH filter:@"Net.h" block:^(NSString *path) {
 //
 //        NSString *fileName = [[path lastPathComponent] stringByDeletingPathExtension];
 //        Class class = NSClassFromString(fileName);

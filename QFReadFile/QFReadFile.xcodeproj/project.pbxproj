@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1512E4EA1F45E5C4009401EE /* TestNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1512E4E91F45E5C4009401EE /* TestNet.m */; };
+		152F82091F4738840043343C /* QFFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 152F82081F4738840043343C /* QFFileHelper.m */; };
 		159984471F467038003EDFAE /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 159984461F467038003EDFAE /* Task.m */; };
 		159984541F46DC32003EDFAE /* QFWriteFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 159984531F46DC32003EDFAE /* QFWriteFile.m */; };
 		159984571F46DC8B003EDFAE /* NSStringUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 159984561F46DC8B003EDFAE /* NSStringUtil.m */; };
@@ -20,6 +21,8 @@
 /* Begin PBXFileReference section */
 		1512E4E81F45E5C4009401EE /* TestNet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNet.h; sourceTree = "<group>"; };
 		1512E4E91F45E5C4009401EE /* TestNet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNet.m; sourceTree = "<group>"; };
+		152F82071F4738840043343C /* QFFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFFileHelper.h; sourceTree = "<group>"; };
+		152F82081F4738840043343C /* QFFileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFFileHelper.m; sourceTree = "<group>"; };
 		159984451F467038003EDFAE /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 		159984461F467038003EDFAE /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		159984521F46DC32003EDFAE /* QFWriteFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFWriteFile.h; sourceTree = "<group>"; };
@@ -72,6 +75,8 @@
 				15CB1B901F441A6800AEC086 /* QFReadFile.m */,
 				159984521F46DC32003EDFAE /* QFWriteFile.h */,
 				159984531F46DC32003EDFAE /* QFWriteFile.m */,
+				152F82071F4738840043343C /* QFFileHelper.h */,
+				152F82081F4738840043343C /* QFFileHelper.m */,
 				1512E4E81F45E5C4009401EE /* TestNet.h */,
 				1512E4E91F45E5C4009401EE /* TestNet.m */,
 				159984451F467038003EDFAE /* Task.h */,
@@ -176,6 +181,7 @@
 				15CB1BCB1F442A9D00AEC086 /* NSDictionary+Extension.m in Sources */,
 				15CB1B911F441A6800AEC086 /* QFReadFile.m in Sources */,
 				15CB1B7A1F441A0100AEC086 /* main.m in Sources */,
+				152F82091F4738840043343C /* QFFileHelper.m in Sources */,
 				159984471F467038003EDFAE /* Task.m in Sources */,
 				159984541F46DC32003EDFAE /* QFWriteFile.m in Sources */,
 				1512E4EA1F45E5C4009401EE /* TestNet.m in Sources */,
