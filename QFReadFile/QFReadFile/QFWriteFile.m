@@ -11,6 +11,11 @@
 @implementation QFWriteFile
 
 + (void)file:(NSString *)path append:(NSString *)content {
+
+    [self file:path append:content wrap:YES];
+}
+
++ (void)file:(NSString *)path append:(NSString *)content wrap:(BOOL)isWrap {
     
     [self createFileAtPath:path contents:nil attributes:nil];
     
@@ -18,6 +23,10 @@
     
     //找到并定位到outFile的末尾位置(在此后追加文件)
     [outFile seekToEndOfFile];
+    
+    if (isWrap) {
+        content = [NSString stringWithFormat:@"%@\n",content];
+    }
     
     NSData *buffer = [content dataUsingEncoding:NSUTF8StringEncoding];
     [outFile writeData:buffer];
