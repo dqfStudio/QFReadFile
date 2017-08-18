@@ -11,6 +11,7 @@
 @interface QFWriteFile : NSObject
 
 + (void)file:(NSString *)path append:(NSString *)content;
+
 + (void)file:(NSString *)path append:(NSString *)content wrap:(BOOL)isWrap;
 
 @end

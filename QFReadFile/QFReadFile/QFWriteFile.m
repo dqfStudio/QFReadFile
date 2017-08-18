@@ -39,6 +39,7 @@
     NSArray *arr = [path pathComponents];
     //跳过lastPathComponent
     if (arr.count >= 2) {
+        //循环创建文件夹
         for (NSInteger i=0; i<arr.count-1; i++) {
             NSRange range = NSMakeRange(0, i+1);
             NSArray *tmpArr = [arr subarrayWithRange:range];
@@ -51,6 +52,7 @@
         }
     }
     
+    //创建文件
     if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
         [[NSFileManager defaultManager] createFileAtPath:path contents:data attributes:attr];
     }
