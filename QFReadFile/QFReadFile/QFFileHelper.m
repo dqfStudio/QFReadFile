@@ -8,13 +8,33 @@
 
 #import "QFFileHelper.h"
 
+@interface QFFileHelper ()
+@property (nonatomic, copy) NSString *timeString;
+@end
+
 @implementation QFFileHelper
+
++ (QFFileHelper *)share {
+    static QFFileHelper *ss = nil;
+    static dispatch_once_t predicate;
+    dispatch_once(&predicate, ^{
+        ss = [[self alloc] init];
+    });
+    return ss;
+}
 
 + (NSString *)homePath {
     return @"/Users/issuser/Desktop/";
 }
 
-+ (NSString *)folderPath {
++ (NSString *)timePath {
+    if (![self share].timeString) {
+        [self share].timeString = [self homePath].append([self timeStamp]).append(@"/");
+    }
+    return [self share].timeString;
+}
+
++ (NSString *)timeStamp {
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     NSTimeZone *timeZone = [NSTimeZone localTimeZone];
@@ -22,7 +42,7 @@
     [formatter setTimeZone:timeZone];
     [formatter setDateFormat:@"yyyy-MM-dd-HH:mm:ss"];
     
-    return [self homePath].append([formatter stringFromDate:[NSDate date]]).append(@"/");
+    return [formatter stringFromDate:[NSDate date]];
 }
 
 + (void)folderPath:(NSString *)path block:(void(^)(NSString *path))callback {

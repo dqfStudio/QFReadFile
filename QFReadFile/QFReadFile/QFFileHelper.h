@@ -12,7 +12,7 @@
 
 + (NSString *)homePath;
 
-+ (NSString *)folderPath;
++ (NSString *)timePath;
 
 + (void)folderPath:(NSString *)path block:(void(^)(NSString *path))callback;
 

@@ -27,6 +27,9 @@
     
 //    [self example1];
     
+//    [QFFileHelper file:[QFFileHelper timePath].append(@"ss.text") append:@"2211"];
+//    [QFFileHelper file:[QFFileHelper timePath].append(@"ss.text") append:@"2211"];
+    
 }
 
 - (void)example1 {
