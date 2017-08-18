@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1512E4EA1F45E5C4009401EE /* TestNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1512E4E91F45E5C4009401EE /* TestNet.m */; };
 		159984471F467038003EDFAE /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 159984461F467038003EDFAE /* Task.m */; };
+		159984541F46DC32003EDFAE /* QFWriteFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 159984531F46DC32003EDFAE /* QFWriteFile.m */; };
+		159984571F46DC8B003EDFAE /* NSStringUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 159984561F46DC8B003EDFAE /* NSStringUtil.m */; };
 		15CB1B7A1F441A0100AEC086 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CB1B791F441A0100AEC086 /* main.m */; };
 		15CB1B911F441A6800AEC086 /* QFReadFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CB1B901F441A6800AEC086 /* QFReadFile.m */; };
 		15CB1BCA1F442A9D00AEC086 /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CB1BC71F442A9D00AEC086 /* NSArray+Extension.m */; };
@@ -20,6 +22,10 @@
 		1512E4E91F45E5C4009401EE /* TestNet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNet.m; sourceTree = "<group>"; };
 		159984451F467038003EDFAE /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 		159984461F467038003EDFAE /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		159984521F46DC32003EDFAE /* QFWriteFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFWriteFile.h; sourceTree = "<group>"; };
+		159984531F46DC32003EDFAE /* QFWriteFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFWriteFile.m; sourceTree = "<group>"; };
+		159984551F46DC8B003EDFAE /* NSStringUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringUtil.h; sourceTree = "<group>"; };
+		159984561F46DC8B003EDFAE /* NSStringUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringUtil.m; sourceTree = "<group>"; };
 		15CB1B751F441A0100AEC086 /* QFReadFile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QFReadFile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15CB1B791F441A0100AEC086 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		15CB1B891F441A0100AEC086 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,6 +70,8 @@
 				15CB1BC51F442A9D00AEC086 /* Extension */,
 				15CB1B8F1F441A6800AEC086 /* QFReadFile.h */,
 				15CB1B901F441A6800AEC086 /* QFReadFile.m */,
+				159984521F46DC32003EDFAE /* QFWriteFile.h */,
+				159984531F46DC32003EDFAE /* QFWriteFile.m */,
 				1512E4E81F45E5C4009401EE /* TestNet.h */,
 				1512E4E91F45E5C4009401EE /* TestNet.m */,
 				159984451F467038003EDFAE /* Task.h */,
@@ -85,6 +93,8 @@
 		15CB1BC51F442A9D00AEC086 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				159984551F46DC8B003EDFAE /* NSStringUtil.h */,
+				159984561F46DC8B003EDFAE /* NSStringUtil.m */,
 				15CB1BC61F442A9D00AEC086 /* NSArray+Extension.h */,
 				15CB1BC71F442A9D00AEC086 /* NSArray+Extension.m */,
 				15CB1BC81F442A9D00AEC086 /* NSDictionary+Extension.h */,
@@ -167,7 +177,9 @@
 				15CB1B911F441A6800AEC086 /* QFReadFile.m in Sources */,
 				15CB1B7A1F441A0100AEC086 /* main.m in Sources */,
 				159984471F467038003EDFAE /* Task.m in Sources */,
+				159984541F46DC32003EDFAE /* QFWriteFile.m in Sources */,
 				1512E4EA1F45E5C4009401EE /* TestNet.m in Sources */,
+				159984571F46DC8B003EDFAE /* NSStringUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

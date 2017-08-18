@@ -6,7 +6,7 @@
 //  Copyright © 2017年 DNE Technology Co.,Ltd. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "NSStringUtil.h"
 
 @interface QFReadFile : NSObject
 

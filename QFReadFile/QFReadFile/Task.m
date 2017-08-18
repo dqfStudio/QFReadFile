@@ -8,6 +8,7 @@
 
 #import "Task.h"
 #import "QFReadFile.h"
+#import "QFWriteFile.h"
 #import "TestNet.h"
 
 #define KPATH @"/Users/issuser/Desktop/WorkPlace/MiguMusic-iOS"
