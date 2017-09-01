@@ -27,4 +27,6 @@
 + (NSString *(^)(NSUInteger))wrap;
 - (NSString *(^)(NSUInteger))wrap;
 
+- (BOOL(^)(NSArray<NSString *> *))containsStrArr;
+
 @end

@@ -61,6 +61,44 @@
     }
 }
 
++ (void)folderPath:(NSString *)path filterArr:(NSArray *)filterArr block:(void(^)(NSString *path))callback {
+    
+    NSArray *files = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:path error:nil];
+    files = [self getClassPathInArr:files filterArr:filterArr];
+    
+    if (callback) {
+        for(NSString *path in files){
+            callback(path);
+        }
+    }
+}
+
++ (NSArray *)getClassPathInArr:(NSArray *)arr filter:(NSString *)filter {
+    NSMutableArray *pathArray = [NSMutableArray array];
+    for(NSString *path in arr){
+        NSString *lastComponent = [path lastPathComponent];
+        if(filter && ![lastComponent hasSuffix:filter]) {
+            continue;
+        }
+        [pathArray addObject:path];
+    }
+    return pathArray;
+}
+
++ (NSArray *)getClassPathInArr:(NSArray *)arr filterArr:(NSArray *)filterArr {
+    NSMutableArray *pathArray = [NSMutableArray array];
+    for(NSString *path in arr) {
+        NSString *lastComponent = [path lastPathComponent];
+        for(NSString *filter in filterArr) {
+            if(filter && ![lastComponent hasSuffix:filter]) {
+                continue;
+            }
+            [pathArray addObject:path];
+        }
+    }
+    return pathArray;
+}
+
 + (void)file:(NSString *)path block:(void(^)(NSString *lineStr))callback {
     
     const char *filePath = [path UTF8String];
@@ -75,18 +113,6 @@
         }
     }
     fclose(fp1);//关闭文件a.txt，有打开就要有关闭
-}
-
-+ (NSArray *)getClassPathInArr:(NSArray *)arr filter:(NSString *)filter {
-    NSMutableArray *pathArray = [NSMutableArray array];
-    for(NSString *path in arr){
-        NSString *lastComponent = [path lastPathComponent];
-        if(filter && ![lastComponent containsString:filter]) {
-            continue;
-        }
-        [pathArray addObject:path];
-    }
-    return pathArray;
 }
 
 + (void)file:(NSString *)path append:(NSString *)content {

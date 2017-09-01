@@ -87,4 +87,17 @@
     };
 }
 
+- (BOOL(^)(NSArray<NSString *> *))containsStrArr {
+    return ^BOOL(NSArray *arr) {
+        if (arr.count <= 0) return NO;
+        BOOL contain = NO;
+        for (NSString *str in arr) {
+            if ([self containsString:str]) {
+                contain = YES;
+            }
+        }
+        return contain;
+    };
+}
+
 @end

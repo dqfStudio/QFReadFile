@@ -11,6 +11,7 @@
 #import "QFWriteFile.h"
 #import "TestNet.h"
 #import "QFFileHelper.h"
+#import "QFImageTool.h"
 
 @implementation Task
 
@@ -30,6 +31,27 @@
 //    [QFFileHelper file:[QFFileHelper timePath].append(@"ss.text") append:@"2211"];
 //    [QFFileHelper file:[QFFileHelper timePath].append(@"ss.text") append:@"2211"];
     
+//    NSArray *arr1 = [QFImageTool allPngImages];
+//    NSArray *arr2 = [QFImageTool allJpgImages];
+    
+    
+//    NSArray *arr1 = [QFImageTool all1XImages];
+//    NSArray *arr2 = [QFImageTool all2XImages];
+//    NSArray *arr3 = [QFImageTool all3XImages];
+    
+
+//    NSArray *arr = [QFImageTool allUnusedImages];
+    
+    
+//    NSArray *arr1 = [QFImageTool allJPGImages];
+//    
+//    NSArray *arr2 = [QFImageTool allJPEGImages];
+//    
+//    NSArray *arr3 = [QFImageTool allGifImages];
+//    NSArray *arr4 = [QFImageTool allGIFImages];
+    
+//    NSLog(@"%@",arr);
+    
 }
 
 - (void)example1 {
@@ -42,7 +64,7 @@
 //        NSString *fileName = [[path lastPathComponent] stringByDeletingPathExtension];
 //        [arr1 addObject:fileName];
 //
-//        [QFFileHelper file:path block:^(NSString *lineStr) {
+//        [QFFileHelper file:KPATH.append(path) block:^(NSString *lineStr) {
 //
 //            [arr2 addObject:lineStr];
 //        }];

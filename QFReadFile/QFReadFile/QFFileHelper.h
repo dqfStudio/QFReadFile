@@ -18,6 +18,8 @@
 
 + (void)folderPath:(NSString *)path filter:(NSString *)filter block:(void(^)(NSString *path))callback;
 
++ (void)folderPath:(NSString *)path filterArr:(NSArray *)filterArr block:(void(^)(NSString *path))callback;
+
 + (void)file:(NSString *)path block:(void(^)(NSString *lineStr))callback;
 
 + (void)file:(NSString *)path append:(NSString *)content;

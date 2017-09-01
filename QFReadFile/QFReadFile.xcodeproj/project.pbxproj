@@ -16,6 +16,8 @@
 		15CB1B911F441A6800AEC086 /* QFReadFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CB1B901F441A6800AEC086 /* QFReadFile.m */; };
 		15CB1BCA1F442A9D00AEC086 /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CB1BC71F442A9D00AEC086 /* NSArray+Extension.m */; };
 		15CB1BCB1F442A9D00AEC086 /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CB1BC91F442A9D00AEC086 /* NSDictionary+Extension.m */; };
+		15E13DAA1F56416000B5F825 /* QFImageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E13DA91F56416000B5F825 /* QFImageTool.m */; };
+		15E13DAD1F56423500B5F825 /* QFScanPrivateMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E13DAC1F56423500B5F825 /* QFScanPrivateMethod.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,10 @@
 		15CB1BC71F442A9D00AEC086 /* NSArray+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extension.m"; sourceTree = "<group>"; };
 		15CB1BC81F442A9D00AEC086 /* NSDictionary+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extension.h"; sourceTree = "<group>"; };
 		15CB1BC91F442A9D00AEC086 /* NSDictionary+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Extension.m"; sourceTree = "<group>"; };
+		15E13DA81F56416000B5F825 /* QFImageTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFImageTool.h; sourceTree = "<group>"; };
+		15E13DA91F56416000B5F825 /* QFImageTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFImageTool.m; sourceTree = "<group>"; };
+		15E13DAB1F56423500B5F825 /* QFScanPrivateMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFScanPrivateMethod.h; sourceTree = "<group>"; };
+		15E13DAC1F56423500B5F825 /* QFScanPrivateMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFScanPrivateMethod.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,10 @@
 				1512E4E91F45E5C4009401EE /* TestNet.m */,
 				159984451F467038003EDFAE /* Task.h */,
 				159984461F467038003EDFAE /* Task.m */,
+				15E13DA81F56416000B5F825 /* QFImageTool.h */,
+				15E13DA91F56416000B5F825 /* QFImageTool.m */,
+				15E13DAB1F56423500B5F825 /* QFScanPrivateMethod.h */,
+				15E13DAC1F56423500B5F825 /* QFScanPrivateMethod.m */,
 				15CB1B891F441A0100AEC086 /* Info.plist */,
 				15CB1B781F441A0100AEC086 /* Supporting Files */,
 			);
@@ -177,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15E13DAA1F56416000B5F825 /* QFImageTool.m in Sources */,
 				15CB1BCA1F442A9D00AEC086 /* NSArray+Extension.m in Sources */,
 				15CB1BCB1F442A9D00AEC086 /* NSDictionary+Extension.m in Sources */,
 				15CB1B911F441A6800AEC086 /* QFReadFile.m in Sources */,
@@ -184,6 +195,7 @@
 				152F82091F4738840043343C /* QFFileHelper.m in Sources */,
 				159984471F467038003EDFAE /* Task.m in Sources */,
 				159984541F46DC32003EDFAE /* QFWriteFile.m in Sources */,
+				15E13DAD1F56423500B5F825 /* QFScanPrivateMethod.m in Sources */,
 				1512E4EA1F45E5C4009401EE /* TestNet.m in Sources */,
 				159984571F46DC8B003EDFAE /* NSStringUtil.m in Sources */,
 			);
