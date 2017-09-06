@@ -46,14 +46,17 @@
 }
 
 + (void)folderPath1:(NSString *)path block:(void(^)(NSString *path))callback {
+    path = [self delLastPathSlash:path];
     [self folderPath1:path filter:nil block:callback];
 }
 
 + (void)folderPath2:(NSString *)path block:(void(^)(NSString *fileName))callback {
+    path = [self delLastPathSlash:path];
     [self folderPath2:path filter:nil block:callback];
 }
 
 + (void)folderPath1:(NSString *)path filter:(NSString *)filter block:(void(^)(NSString *path))callback {
+    path = [self delLastPathSlash:path];
     NSArray *files = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:path error:nil];
     files = [self getClassPathInArr:files filter:filter];
     
@@ -66,6 +69,7 @@
 
 
 + (void)folderPath2:(NSString *)path filter:(NSString *)filter block:(void(^)(NSString *fileName))callback {
+    path = [self delLastPathSlash:path];
     NSArray *files = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:path error:nil];
     files = [self getClassPathInArr:files filter:filter];
     
@@ -77,6 +81,7 @@
 }
 
 + (void)folderPath1:(NSString *)path filterArr:(NSArray *)filterArr block:(void(^)(NSString *path))callback {
+    path = [self delLastPathSlash:path];
     NSArray *files = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:path error:nil];
     files = [self getClassPathInArr:files filterArr:filterArr];
     
@@ -88,6 +93,7 @@
 }
 
 + (void)folderPath2:(NSString *)path filterArr:(NSArray *)filterArr block:(void(^)(NSString *fileName))callback {
+    path = [self delLastPathSlash:path];
     NSArray *files = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:path error:nil];
     files = [self getClassPathInArr:files filterArr:filterArr];
     
@@ -141,7 +147,7 @@
 }
 
 + (void)file:(NSString *)path append:(NSString *)content {
-    
+
     [self file:path append:content wrap:YES];
 }
 
@@ -187,6 +193,13 @@
         [[NSFileManager defaultManager] createFileAtPath:path contents:data attributes:attr];
     }
     
+}
+
++ (NSString *)delLastPathSlash:(NSString *)path {
+    if ([[path substringFromIndex:path.length-1] isEqualToString:@"/"]) {
+        path = [path substringToIndex:path.length-1];
+    }
+    return [path mutableCopy];
 }
 
 @end

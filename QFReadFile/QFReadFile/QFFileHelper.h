@@ -11,7 +11,6 @@
 @interface QFFileHelper : NSObject
 
 + (NSString *)homePath;
-
 + (NSString *)timePath;
 
 + (void)folderPath1:(NSString *)path block:(void(^)(NSString *path))callback;

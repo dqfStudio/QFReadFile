@@ -13,8 +13,8 @@
 + (NSString *(^)(id))append;
 - (NSString *(^)(id))append;
 
-+ (NSString *(^)(NSString *, NSUInteger))appendString;
-- (NSString *(^)(NSString *, NSUInteger))appendString;
++ (NSString *(^)(NSString *, NSUInteger))appendCount;
+- (NSString *(^)(NSString *, NSUInteger))appendCount;
 
 - (NSString *(^)(NSString *, NSString *))replace;
 
@@ -27,6 +27,17 @@
 + (NSString *(^)(NSUInteger))wrap;
 - (NSString *(^)(NSUInteger))wrap;
 
+- (NSString *(^)(NSString *))subStringToStart;
+- (NSString *(^)(NSString *))subStringToEnd;
+
+- (NSString *(^)(NSString *))subStringFromStart;
+- (NSString *(^)(NSString *))subStringFromEnd;
+
+- (NSArray<NSString *> *(^)(NSString *))componentsByString;
+- (NSArray<NSString *> *(^)(NSString *))componentsBySetString;
+- (NSArray<NSString *> *(^)(NSString *, NSString *))componentsByStringBySetString;
+
+- (BOOL(^)(NSString *))containsString;
 - (BOOL(^)(NSArray<NSString *> *))containsStrArr;
 
 @end
