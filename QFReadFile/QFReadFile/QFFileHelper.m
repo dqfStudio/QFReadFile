@@ -93,7 +93,7 @@
     
     if (callback) {
         for(NSString *name in files){
-            callback(name);
+            callback([name lastPathComponent]);
         }
     }
 }
