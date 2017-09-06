@@ -45,30 +45,55 @@
     return [formatter stringFromDate:[NSDate date]];
 }
 
-+ (void)folderPath:(NSString *)path block:(void(^)(NSString *path))callback {
-    [self folderPath:path filter:nil block:callback];
++ (void)folderPath1:(NSString *)path block:(void(^)(NSString *path))callback {
+    [self folderPath1:path filter:nil block:callback];
 }
 
-+ (void)folderPath:(NSString *)path filter:(NSString *)filter block:(void(^)(NSString *path))callback {
-    
++ (void)folderPath2:(NSString *)path block:(void(^)(NSString *fileName))callback {
+    [self folderPath2:path filter:nil block:callback];
+}
+
++ (void)folderPath1:(NSString *)path filter:(NSString *)filter block:(void(^)(NSString *path))callback {
     NSArray *files = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:path error:nil];
     files = [self getClassPathInArr:files filter:filter];
     
     if (callback) {
-        for(NSString *path in files){
-            callback(path);
+        for(NSString *name in files){
+            callback(path.append(@"/").append(name));
         }
     }
 }
 
-+ (void)folderPath:(NSString *)path filterArr:(NSArray *)filterArr block:(void(^)(NSString *path))callback {
+
++ (void)folderPath2:(NSString *)path filter:(NSString *)filter block:(void(^)(NSString *fileName))callback {
+    NSArray *files = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:path error:nil];
+    files = [self getClassPathInArr:files filter:filter];
     
+    if (callback) {
+        for(NSString *name in files){
+            callback([name lastPathComponent]);
+        }
+    }
+}
+
++ (void)folderPath1:(NSString *)path filterArr:(NSArray *)filterArr block:(void(^)(NSString *path))callback {
     NSArray *files = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:path error:nil];
     files = [self getClassPathInArr:files filterArr:filterArr];
     
     if (callback) {
-        for(NSString *path in files){
-            callback(path);
+        for(NSString *name in files){
+            callback(path.append(@"/").append(name));
+        }
+    }
+}
+
++ (void)folderPath2:(NSString *)path filterArr:(NSArray *)filterArr block:(void(^)(NSString *fileName))callback {
+    NSArray *files = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:path error:nil];
+    files = [self getClassPathInArr:files filterArr:filterArr];
+    
+    if (callback) {
+        for(NSString *name in files){
+            callback(name);
         }
     }
 }

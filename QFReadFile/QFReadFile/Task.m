@@ -13,6 +13,8 @@
 #import "QFFileHelper.h"
 #import "QFImageTool.h"
 
+#define KPATH @"/Users/issuser/Desktop/WorkPlace/MiguMusic-iOS/MGMobileMusic"
+
 @implementation Task
 
 + (Task *)share {
@@ -27,7 +29,7 @@
 - (void)exe {
     
 //    [self example1];
-    
+//    
 //    [QFFileHelper file:[QFFileHelper timePath].append(@"ss.text") append:@"2211"];
 //    [QFFileHelper file:[QFFileHelper timePath].append(@"ss.text") append:@"2211"];
     
@@ -59,12 +61,12 @@
 //    NSMutableArray *arr1 = [NSMutableArray array];
 //    NSMutableArray *arr2 = [NSMutableArray array];
 //
-//    [QFFileHelper folderPath:KPATH filter:@"Net.h" block:^(NSString *path) {
+//    [QFFileHelper folderPath1:KPATH filter:@"Net.h" block:^(NSString *path) {
 //
 //        NSString *fileName = [[path lastPathComponent] stringByDeletingPathExtension];
 //        [arr1 addObject:fileName];
 //
-//        [QFFileHelper file:KPATH.append(path) block:^(NSString *lineStr) {
+//        [QFFileHelper file:path block:^(NSString *lineStr) {
 //
 //            [arr2 addObject:lineStr];
 //        }];
@@ -79,10 +81,10 @@
     //例子二
 //    NSMutableArray *arr = [NSMutableArray array];
 //
-//    [QFFileHelper folderPath:KPATH filter:@"Net.h" block:^(NSString *path) {
+//    [QFFileHelper folderPath2:KPATH filter:@"Net.h" block:^(NSString *fileName) {
 //
-//        NSString *fileName = [[path lastPathComponent] stringByDeletingPathExtension];
-//        Class class = NSClassFromString(fileName);
+//        NSString *name = [fileName stringByDeletingPathExtension];
+//        Class class = NSClassFromString(name);
 //        TestNet *testNet = [[class alloc] init];
 //
 //        [arr addObject:testNet.baseUrl];

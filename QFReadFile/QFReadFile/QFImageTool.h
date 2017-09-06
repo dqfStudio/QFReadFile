@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define KFolderPath @"/Users/issuser/Desktop/WorkPlace/Test-MiguMusic-iOS/MGMobileMusic/"
+#define KFolderPath @"/Users/issuser/Desktop/WorkPlace/Test-MiguMusic-iOS/MGMobileMusic"
 
 @interface QFImageTool : NSObject
 

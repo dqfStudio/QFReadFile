@@ -14,11 +14,14 @@
 
 + (NSString *)timePath;
 
-+ (void)folderPath:(NSString *)path block:(void(^)(NSString *path))callback;
++ (void)folderPath1:(NSString *)path block:(void(^)(NSString *path))callback;
++ (void)folderPath2:(NSString *)path block:(void(^)(NSString *fileName))callback;
 
-+ (void)folderPath:(NSString *)path filter:(NSString *)filter block:(void(^)(NSString *path))callback;
++ (void)folderPath1:(NSString *)path filter:(NSString *)filter block:(void(^)(NSString *path))callback;
++ (void)folderPath2:(NSString *)path filter:(NSString *)filter block:(void(^)(NSString *fileName))callback;
 
-+ (void)folderPath:(NSString *)path filterArr:(NSArray *)filterArr block:(void(^)(NSString *path))callback;
++ (void)folderPath1:(NSString *)path filterArr:(NSArray *)filterArr block:(void(^)(NSString *path))callback;
++ (void)folderPath2:(NSString *)path filterArr:(NSArray *)filterArr block:(void(^)(NSString *fileName))callback;
 
 + (void)file:(NSString *)path block:(void(^)(NSString *lineStr))callback;
 
