@@ -170,6 +170,14 @@
     [outFile closeFile];
 }
 
+
++ (void)file:(NSString *)path rename:(NSString *)newPath {
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+    [self createFileAtPath:newPath contents:data attributes:nil];
+}
+
+
 + (void)createFileAtPath:(NSString *)path contents:(nullable NSData *)data attributes:(nullable NSDictionary<NSString *, id> *)attr {
     
     NSArray *arr = [path pathComponents];

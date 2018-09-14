@@ -28,4 +28,6 @@
 
 + (void)file:(NSString *)path append:(NSString *)content wrap:(BOOL)isWrap;
 
++ (void)file:(NSString *)path rename:(NSString *)newPath;
+
 @end
